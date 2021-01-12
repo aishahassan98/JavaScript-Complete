@@ -1,0 +1,33 @@
+<html>
+
+    <script>
+        Function countWords()
+        {
+            var text = document.getElementById("inputTextField").value;
+            var numWords=0;
+            for (var i=0; i < text.length; i++ )
+            {
+              var currentCharacter= text[i];
+              if (currentCharacter == " ")
+              {    
+              numWords += 1; // Need to add "+1" because the word count counts the spaces and not the words. "My name is Aisha" has 4 words and 3 spaces. 
+              } 
+            } 
+            numWords += 1;
+            document.getElementById("numWordsOutput").innerHTML = numWords + "words";
+        }
+        
+        </script>
+   <body> 
+<h2>Word Counter</h2>
+<textarea id="inputTextField" rows=40 cols=80></textarea>
+<br>
+<button onclick="countWords()">Count Words</button>
+<br>
+<div id="numWordsOutput"> 0 Words</div>
+
+    
+    </body>
+</html>
+
+
